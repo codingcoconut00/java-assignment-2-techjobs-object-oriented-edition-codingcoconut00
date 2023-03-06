@@ -6,7 +6,21 @@ public class CoreCompetency {
 
     private int id;
     private static int nextId = 1;
+// Value getter& setter
+    public String getValue() {
+        return value;
+        //logic?
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
     private String value;
+    // id getter. its val is set below hence why no setter is needed
+    public int getId() {
+        return id;
+    }
 
     public CoreCompetency() {
         this.id = nextId;

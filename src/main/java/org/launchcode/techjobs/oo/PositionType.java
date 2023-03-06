@@ -6,6 +6,20 @@ public class PositionType {
     private static int nextId = 1;
     private String value;
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        //typecasted
+        PositionType that = (PositionType) o;
+
+        return id == that.id;
+    }
+    @Override
+    public int hashCode() {
+        return id;
+    }
+
     public PositionType() {
         id = nextId;
         nextId++;
@@ -14,6 +28,12 @@ public class PositionType {
     public PositionType(String value) {
         this();
         this.value = value;
+    }
+    //to string method
+    //logic?
+    public String toString(){
+
+        return value;
     }
 
     // TODO: Add a custom toString() method that returns the data stored in 'value'.
